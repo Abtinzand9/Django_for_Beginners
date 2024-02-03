@@ -19,7 +19,16 @@
             <a href="{% url 'new' %}">create new post</a>
         </div>
     </header>
-
+    {% if user.is_authenticated %}
+        <p>hello {{user}}</p>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+        </form>
+    {% else %}
+        <p>you are not loged in</p>
+        <a href="{% url 'login' %}">login</a>
+    {% endif %}
     <div>    
     {% block content %}{% endblock content %}
     </div>
