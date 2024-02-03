@@ -8,6 +8,9 @@
          rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>django title</title>
+   
+</head>
+<body> 
     <header>
         <div class='nav-left'>
             <h1><a href="{% url 'home' %}">django blog</a></h1>
@@ -16,9 +19,7 @@
             <a href="{% url 'new' %}">create new post</a>
         </div>
     </header>
-  
-</head>
-<body>
+
     <div>    
     {% block content %}{% endblock content %}
     </div>
