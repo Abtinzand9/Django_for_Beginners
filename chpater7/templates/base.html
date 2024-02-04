@@ -26,8 +26,9 @@
             <button type="submit">logout</button>
         </form>
     {% else %}
-        <p>you are not loged in</p>
-        <a href="{% url 'login' %}">login</a>
+        <p>you are not loged in</p>  
+        <a href="{% url 'login' %}">login</a> |
+        <a href="{% url 'signup' %}">signup</a>
     {% endif %}
     <div>    
     {% block content %}{% endblock content %}
