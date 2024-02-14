@@ -5,7 +5,7 @@
 <h1>hi {{user}} you are {{user.age}} years old </h1>
 <form method="POST" action="{% url 'logout' %}">
     {% csrf_token %}
-    <button type="submit">logout</button>
+    <button class='btn btn-danger ml-2' type='submit'>Log out</button>
 </form>
 {% else %}
 <h1>you are not loged in </h1>
